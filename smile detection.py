@@ -26,7 +26,7 @@ def detect(gray, frame):
             cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 1)
         smiles = smile_cascade.detectMultiScale(roi_gray, 1.7, 20)
         if len(smiles) == 0:
-               cv2.putText(frame, 'Why so sad?', (x - 1, y - 1), cv2.FONT_HERSHEY_PLAIN,2,(0, 255, 0))
+               cv2.putText(frame, 'Why so serious?', (x - 1, y - 1), cv2.FONT_HERSHEY_PLAIN,2,(0, 255, 0))
                
         for (sx, sy, sw, sh) in smiles:
             cv2.rectangle(roi_color, (sx, sy), (sx+sw, sy+sh), (0, 0, 255), 1)
